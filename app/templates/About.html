@@ -5,13 +5,21 @@
     <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
       Favorite Artists
     </button>
-    <ol class="list-group">
-        <li class="list-group-item">Elton John</li>
-        <li class="list-group-item">Pink</li>
-        <li class="list-group-item">Morat</li>
-        <li class="list-group-item">Celine Dion</li>
-        <li class="list-group-item">Fonseca</li>
-      </ol>
+    <ol>
+      {% for artist in fav5 %}
+
+        {% if artist == 'Elton John' %}
+          <li>{{artist}} is my favorite artist and the rest are:</li>
+          
+
+        {% else %}
+          <li>{{artist}}</li>
+
+        {% endif %}
+
+      {% endfor %}
+      
+    </ol>
       
     <a href="/">Go Home</a>
   </div>

@@ -8,5 +8,10 @@ def Home():
 
 @app.route('/About')
 def About():
-    return render_template('About.html')
+    fav_artist = ['Elton John', 'Pink', 'Morat', 'Celine Dion', 'Fonseca']
+    return render_template('About.html',fav5 = fav_artist)
+
+
+
+    
     
